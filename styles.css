@@ -35,20 +35,77 @@
 
         .terminal-text span { color: var(--c4-orange); }
 
-        h1 {
-            font-size: 2.5rem;
-            margin: 30px;
+        .h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;      /* evita que las palabras se separen */
+            gap: 15px;              /* espacio controlado para la silueta */
+            
+            margin-top: 10vh;       /* usamos vh para que sea relativo a la pantalla */
+            font-size: clamp(1rem, 8vw, 5rem); /* se encoge solo segun el ancho */
+            font-family: 'rajdhani', sans-serif;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            font-style: italic;
-            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ajuste para la silueta negra del medio */
+        .h1 img, .h1 .tu-clase-silueta {
+            height: 1.2em;          /* su tamano siempre sera proporcional a la letra */
+            width: auto;
+        }
+
+        /* arreglo para celus */
+        @media (max-width: 768px) {
+            .h1 {
+                margin-top: 20rem;    /* menos espacio arriba en movil, joder */
+                gap: 10px;
+            }
+        }
+        .fotico {
+            width: 200px;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        .video-fondo {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .titulo {
+            position: relative;
+            width: 100%;
+            height: 80vh; 
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .historia {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/GF-backg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* ppcional: crea un efecto "parallax" muy pro */
+            color: white;
+            padding: 50px 10%;
+            position: relative; 
+            z-index: 2;         /* lo pone por encima del video si hay solapamiento */
         }
 
         h2 {
             font-size: 2rem;
             margin: 30px;
-            text-align: start;
+            text-align: center;
             color: var(--c4-orange);
+            box-shadow: #0b0d0f;
+            border-bottom: 2px solid var(--c4-orange);
         }
 
         p {
@@ -65,13 +122,6 @@
             
         }
 
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 40px;
-            justify-content: center;
-        } 
-
         /* centrar texto y elementos dentro de las cajas*/
         
         .cajas .stats-box {
@@ -82,15 +132,34 @@
             gap: 8px;
         }
 
-        /* ajustar tamaño de las imagenes*/
-        .cajas .stats-box img {
-            max-width: 140px;
-            height: auto;
-            display: block;
-            align-self: center;
-
+        .desarrolladores {
+            display: flex;    /* usamos flexbox para alinear las cajas */
+            justify-content: center;
+            gap: 20px;             
+            flex-wrap: wrap; 
+            padding: 20px;
         }
-        
+
+        .caja-autor {
+            flex: 1;                /* obliga a ambas a crecer por igual */
+            max-width: 350px;       /* ajusta este numero al ancho que prefieras */
+            min-width: 280px;       /* evita que se hagan muy flacas */
+            display: flex;          /* esto es para alinear lo de ADENTRO de la caja */
+            flex-direction: column; 
+            justify-content: space-between; /* hace que el contenido se distribuya parejo */
+            background-color: #1a1a1a; 
+            border-top: 3px solid #8e44ad;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* para que las imagenes no deformen la caja */
+        .caja-autor img {
+            width: 100%;
+            height: 200px;         /* forzamos una altura igual para las fotos */
+            object-fit: cover;     /* recorta la imagen para que no se vea estirada */
+            margin-bottom: 7px;
+        }
         .cajas{
             background: var(--card-bg);
             border: 1px solid var(--border-gray);
@@ -126,7 +195,7 @@
 
         .info {
             font-size: 0.9rem;
-            margin: 5px;
+            margin: 10px;
             text-align: start;
         }
 
