@@ -6,15 +6,17 @@
 El blog está diseñado únicamente para la visualización de contenido, sin funcionalidades interactivas como creación, edición o eliminación de publicaciones.
 
 ## Características
-- Visualización de publicaciones de blog con un diseño limpio y minimalista.
+- Visualización del contenido de blog con un diseño limpio y minimalista.
 - Organización clara de las publicaciones para facilitar la lectura.
 - Código estructurado y fácil de entender para quienes deseen aprender o reutilizarlo.
 
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/ques0telita/Blog-CS.git
+## Puedes clonar este repositorio
 
-# Captura de como se veria la pagina
+```bash
+   git clone https://github.com/ques0telita/Blog-CS.git
+```
+
+# Captura de sitio web
 
 ![Captura de pantalla](/images/capturaBlogCS.png)
 
