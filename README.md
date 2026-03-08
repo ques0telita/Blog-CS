@@ -10,7 +10,7 @@ El blog está diseñado únicamente para la visualización de contenido, sin fun
 - Organización clara de las publicaciones para facilitar la lectura.
 - Código estructurado y fácil de entender para quienes deseen aprender o reutilizarlo.
 
-## Puedes clonar este repositorio
+## Puedes clonar este repositorio asi:
 
 ```bash
    git clone https://github.com/ques0telita/Blog-CS.git
@@ -22,4 +22,4 @@ El blog está diseñado únicamente para la visualización de contenido, sin fun
 
 # Este proyecto fue desarrollado por ques0telita. Si tienes preguntas o sugerencias, no dudes en abrir un issue o contactarme directamente.
 
-## ¡Gracias por visitar este repositorio! 😊
+# ¡Gracias por visitar este repositorio! 😊

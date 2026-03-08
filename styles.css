@@ -41,7 +41,6 @@
             justify-content: center;
             flex-wrap: nowrap;      /* evita que las palabras se separen */
             gap: 15px;              /* espacio controlado para la silueta */
-            
             margin-top: 10vh;       /* usamos vh para que sea relativo a la pantalla */
             font-size: clamp(1rem, 8vw, 5rem); /* se encoge solo segun el ancho */
             font-family: 'rajdhani', sans-serif;
@@ -211,16 +210,63 @@
         }  
 
         .evo-game {
-            padding: 20px;
-            margin: 40px;
+            padding: 10px;
+            margin: 20px;
             border-radius: 8px;
+        }
+
+        .e-sports {
+            position: relative;
+            width: 100%;
+            height: 100vh; 
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+        }
+        .sports {
+            display: flex;
+            flex-wrap: nowrap;      
+            gap: 15px;              
+            margin-top: 1rem;       
+            font-size: clamp(0.5rem, 4vw, 2.5rem); 
+            font-family: 'rajdhani', sans-serif;
+            text-transform: uppercase;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            border-bottom: none;
+            margin-left: 3rem;
+            margin-bottom: 0.3rem;
+        }
+        .logcs2 {
+            height: 6rem;         
+            width: 6rem;
+            margin-left: 3rem;
+        }
+
+        .e-sports p {
+            font-size: 1.2rem;
+            max-width: 500rem;
+            margin: 10px auto;
+            margin-left: 3rem;
+            text-align: left;
         }
 
         /* pie de pagina*/
         footer {
+            display: flex;
+            flex-direction: column;
             text-align: center;
             padding: 40px;
             color: #444;
             font-size: 0.8rem;
             border-top: 1px solid #1a1d20;
         }
+
+        .tag {
+            color: var(--c4-orange);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    
